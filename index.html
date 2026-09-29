@@ -3,44 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE FASHION | Boutique & Luxury Dresses</title>
+    <title>LUXE VOGUE | High Fashion & Celebrity Couture</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-family: 'Playfair Display', 'Didot', 'Helvetica Neue', serif, sans-serif;
         }
 
         body {
             background-color: #ffffff;
             color: #111111;
+            overflow-x: hidden;
         }
 
-        /* Top Announcement Bar */
+        /* Top Bar */
         .top-bar {
-            background-color: #fce4e4;
-            color: #333;
+            background-color: #000000;
+            color: #fff;
             text-align: center;
-            padding: 8px;
-            font-size: 12px;
-            letter-spacing: 1px;
-            font-weight: 600;
+            padding: 10px;
+            font-size: 11px;
+            letter-spacing: 2px;
             text-transform: uppercase;
+            font-family: sans-serif;
         }
 
         /* Header / Logo */
         header {
             text-align: center;
-            padding: 25px 20px 15px;
+            padding: 30px 20px 15px;
             border-bottom: 1px solid #eee;
         }
 
         .brand-logo {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: 4px;
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 6px;
             text-transform: uppercase;
             color: #000;
             text-decoration: none;
@@ -51,103 +52,119 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            padding: 15px 0;
+            padding: 18px 0;
             border-bottom: 1px solid #eee;
+            font-family: sans-serif;
         }
 
         nav a {
-            color: #222;
+            color: #111;
             text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: 0.2s;
-        }
-
-        nav a:hover {
-            color: #e07a5f;
-        }
-
-        /* Category Grid Section (Top Banner) */
-        .container {
-            max-width: 1300px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr;
-            gap: 15px;
-            margin-bottom: 50px;
-        }
-
-        .category-card {
-            position: relative;
-            overflow: hidden;
-            border-radius: 4px;
-        }
-
-        .category-card img {
-            width: 100%;
-            height: 100%;
-            min-height: 380px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        .category-card:hover img {
-            transform: scale(1.03);
-        }
-
-        .category-btn {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: rgba(255, 255, 255, 0.9);
-            color: #000;
-            padding: 8px 30px;
             font-size: 12px;
-            font-weight: bold;
+            font-weight: 600;
             letter-spacing: 2px;
             text-transform: uppercase;
-            border: none;
-            border-radius: 2px;
+            transition: 0.3s;
             cursor: pointer;
         }
 
-        /* Section Title */
-        .section-header {
-            margin: 40px 0 20px;
-            border-bottom: 2px solid #111;
-            padding-bottom: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+        nav a:hover {
+            color: #b89756;
         }
 
-        .section-header h2 {
-            font-size: 16px;
-            letter-spacing: 2px;
+        .container {
+            max-width: 1350px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* VOGUE STYLE HERO SECTION (Large LUXE Text + Stunning Model) */
+        .vogue-hero {
+            position: relative;
+            height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            overflow: hidden;
+            background-color: #f7f7f7;
+        }
+
+        /* Huge Text Behind Girl */
+        .vogue-hero .bg-text {
+            position: absolute;
+            font-size: 26vw;
+            font-weight: 900;
+            color: rgba(0, 0, 0, 0.08);
+            letter-spacing: -10px;
+            z-index: 1;
+            user-select: none;
+            line-height: 0.8;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Model Image In Front */
+        .vogue-hero img {
+            position: absolute;
+            height: 95%;
+            z-index: 2;
+            object-fit: contain;
+            bottom: 0;
+        }
+
+        .vogue-hero .hero-overlay-content {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            z-index: 3;
+            color: #000;
+            font-family: sans-serif;
+        }
+
+        .vogue-hero .hero-overlay-content h1 {
+            font-size: 24px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 700;
         }
 
-        .section-header a {
+        .vogue-hero .hero-overlay-content p {
+            font-size: 13px;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* Section Title */
+        .section-header {
+            margin: 60px 0 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-header h2 {
+            font-size: 24px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .section-header p {
             font-size: 12px;
-            color: #666;
-            text-decoration: underline;
+            color: #777;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            text-transform: uppercase;
+            font-family: sans-serif;
         }
 
         /* Product Showcase Grid */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
             margin-bottom: 60px;
+            font-family: sans-serif;
         }
 
         .product-card {
@@ -155,53 +172,109 @@
             position: relative;
         }
 
-        .product-card .badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: #fff;
-            color: #e07a5f;
-            font-size: 10px;
-            padding: 3px 8px;
-            font-weight: bold;
-            z-index: 2;
-        }
-
         .product-card img {
             width: 100%;
-            height: 380px;
+            height: 420px;
             object-fit: cover;
             background-color: #f8f8f8;
-            border-radius: 4px;
+            border-radius: 2px;
+            transition: transform 0.4s ease;
         }
 
-        .product-vendor {
-            font-size: 11px;
-            color: #888;
-            letter-spacing: 1px;
-            margin-top: 12px;
+        .product-card:hover img {
+            transform: scale(1.02);
+        }
+
+        .product-tag {
+            font-size: 10px;
+            color: #b89756;
+            letter-spacing: 2px;
+            margin-top: 15px;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
         .product-title {
-            font-size: 13px;
-            margin: 5px 0;
-            color: #222;
-            font-weight: 500;
+            font-size: 14px;
+            margin: 6px 0;
+            color: #111;
+            font-weight: 600;
         }
 
         .product-price {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 700;
-            color: #111;
+            color: #000;
+        }
+
+        /* CELEBRITY RED CARPET SECTION */
+        .celebrity-section {
+            background-color: #0d0d0d;
+            color: #ffffff;
+            padding: 80px 20px;
+            margin: 60px 0;
+        }
+
+        .celebrity-section .section-header h2 {
+            color: #fff;
+        }
+
+        .celebrity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1350px;
+            margin: 40px auto 0;
+        }
+
+        .celeb-card {
+            position: relative;
+            overflow: hidden;
+            height: 480px;
+        }
+
+        .celeb-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.9);
+            transition: 0.5s ease;
+        }
+
+        .celeb-card:hover img {
+            transform: scale(1.05);
+            filter: brightness(1);
+        }
+
+        .celeb-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 25px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            font-family: sans-serif;
+        }
+
+        .celeb-info h3 {
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .celeb-info p {
+            font-size: 12px;
+            color: #ccc;
+            margin-top: 4px;
         }
 
         /* Dark Footer */
         footer {
-            background-color: #1c1c1c;
+            background-color: #111111;
             color: #ffffff;
             padding: 60px 40px 20px;
-            margin-top: 50px;
+            font-family: sans-serif;
         }
 
         .footer-grid {
@@ -213,7 +286,7 @@
         }
 
         .footer-col h4 {
-            font-size: 13px;
+            font-size: 12px;
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 20px;
@@ -225,55 +298,113 @@
         }
 
         .footer-col ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        .footer-col ul li a {
-            color: #aaa;
+        .footer-col ul li a, .footer-col ul li span {
+            color: #999;
             text-decoration: none;
             font-size: 13px;
             transition: 0.2s;
-        }
-
-        .footer-col ul li a:hover {
-            color: #fff;
-        }
-
-        .newsletter-box input[type="email"] {
-            width: 65%;
-            padding: 12px;
-            background: transparent;
-            border: 1px solid #444;
-            color: #fff;
-            font-size: 12px;
-            outline: none;
-        }
-
-        .newsletter-box button {
-            width: 30%;
-            padding: 12px;
-            background: #ffffff;
-            color: #000;
-            border: none;
-            font-weight: bold;
-            font-size: 11px;
             cursor: pointer;
-            letter-spacing: 1px;
+        }
+
+        .footer-col ul li a:hover, .footer-col ul li span:hover {
+            color: #fff;
+        }
+
+        .email-display {
+            display: inline-block;
+            background: #222;
+            padding: 8px 12px;
+            border-radius: 4px;
+            color: #b89756;
+            font-weight: bold;
+            font-size: 13px;
+            margin-top: 5px;
         }
 
         .copyright {
             text-align: center;
-            border-top: 1px solid #333;
-            margin-top: 40px;
+            border-top: 1px solid #222;
+            margin-top: 50px;
             padding-top: 20px;
+            font-size: 11px;
+            color: #666;
+            letter-spacing: 1px;
+        }
+
+        /* MODAL POPUPS */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-box {
+            background: #fff;
+            color: #000;
+            padding: 40px;
+            max-width: 550px;
+            width: 90%;
+            border-radius: 4px;
+            position: relative;
+            font-family: sans-serif;
+            text-align: center;
+        }
+
+        .modal-box h3 {
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .modal-box p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 22px;
+            cursor: pointer;
+            color: #000;
+        }
+
+        .country-list {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            padding: 10px;
+            text-align: left;
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .excluded-tag {
+            background: #ffe6e6;
+            color: #d9534f;
+            padding: 8px;
+            font-weight: bold;
             font-size: 12px;
-            color: #777;
+            border-radius: 4px;
+            margin-top: 10px;
         }
 
         @media (max-width: 768px) {
-            .category-grid { grid-template-columns: 1fr; }
+            .vogue-hero .bg-text { font-size: 35vw; }
+            .vogue-hero img { height: 80%; }
             .footer-grid { grid-template-columns: 1fr; }
-            .product-card img { height: 320px; }
         }
     </style>
 </head>
@@ -281,83 +412,104 @@
 
     <!-- Announcement Bar -->
     <div class="top-bar">
-        Free Worldwide Express Shipping On Orders Over $150
+        Worldwide Express Shipping Available | Exclusive Haute Couture
     </div>
 
     <!-- Header / Logo -->
     <header>
-        <a href="#" class="brand-logo">LUXE FASHION</a>
+        <a href="#" class="brand-logo">LUXE VOGUE</a>
     </header>
 
     <!-- Navigation Menu -->
     <nav>
         <a href="#">Home</a>
         <a href="#">New Arrivals</a>
-        <a href="#">Dresses</a>
-        <a href="#">Sets</a>
-        <a href="#">Swim Wear</a>
-        <a href="#">Sale</a>
-        <a href="#">Contact Us</a>
+        <a href="#">Haute Couture</a>
+        <a href="#">Celebrity Style</a>
+        <a onclick="openShippingModal()">Shipping Info</a>
+        <a onclick="openContactModal()">Contact Us</a>
     </nav>
 
+    <!-- VOGUE HERO SECTION -->
     <div class="container">
-        <!-- Main Category Banners Grid -->
-        <div class="category-grid">
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800" alt="New Season">
-                <button class="category-btn">NEW SEASON</button>
-            </div>
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800" alt="Sets">
-                <button class="category-btn">SETS</button>
-            </div>
-            <div class="category-card">
-                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800" alt="Basics">
-                <button class="category-btn">BASICS</button>
+        <div class="vogue-hero">
+            <div class="bg-text">LUXE</div>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000" alt="Vogue Fashion Model">
+            <div class="hero-overlay-content">
+                <h1>FALL / WINTER COUTURE</h1>
+                <p>The Ultimate Luxury Experience</p>
             </div>
         </div>
+    </div>
 
-        <!-- New Arrivals Showcase Section -->
+    <!-- LUXURY DRESSES SHOWCASE -->
+    <div class="container">
         <div class="section-header">
-            <h2>NEW ARRIVALS DAILY</h2>
-            <a href="#">View All</a>
+            <h2>EXCLUSIVE DRESSES & SUITS</h2>
+            <p>Curated Luxury Collection</p>
         </div>
 
         <div class="product-grid">
-            <!-- Product 1 -->
             <div class="product-card">
-                <span class="badge">New</span>
-                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600" alt="Dress">
-                <div class="product-vendor">LUXE FASHION</div>
-                <div class="product-title">Tropicoqueta Sequin Mini</div>
-                <div class="product-price">$40.00</div>
+                <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600" alt="Dior Inspired Silk Gown">
+                <div class="product-tag">HAUTE COUTURE</div>
+                <div class="product-title">Dior Inspired Emerald Silk Gown</div>
+                <div class="product-price">$3,400.00</div>
             </div>
 
-            <!-- Product 2 -->
             <div class="product-card">
-                <span class="badge">New</span>
-                <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600" alt="Dress">
-                <div class="product-vendor">LUXE FASHION</div>
-                <div class="product-title">Diamante Mini Dress</div>
-                <div class="product-price">$45.00</div>
+                <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=600" alt="Sparkling Evening Dress">
+                <div class="product-tag">ROYAL EDITION</div>
+                <div class="product-title">Sparkling Crystal Evening Dress</div>
+                <div class="product-price">$2,850.00</div>
             </div>
 
-            <!-- Product 3 -->
             <div class="product-card">
-                <span class="badge">New</span>
-                <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=600" alt="Dress">
-                <div class="product-vendor">LUXE FASHION</div>
-                <div class="product-title">Solana Fringe Dress</div>
-                <div class="product-price">$40.00</div>
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600" alt="Velvet Runway Dress">
+                <div class="product-tag">PARIS RUNWAY</div>
+                <div class="product-title">Midnight Velvet Runway Dress</div>
+                <div class="product-price">$4,100.00</div>
             </div>
 
-            <!-- Product 4 -->
             <div class="product-card">
-                <span class="badge">New</span>
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600" alt="Dress">
-                <div class="product-vendor">LUXE FASHION</div>
-                <div class="product-title">Sequin Affair Mini</div>
-                <div class="product-price">$50.00</div>
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600" alt="Gala Silk Corset">
+                <div class="product-tag">EXCLUSIVE</div>
+                <div class="product-title">Gala Golden Silk Corset Mini</div>
+                <div class="product-price">$1,950.00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CELEBRITY / RED CARPET SECTION -->
+    <div class="celebrity-section">
+        <div class="section-header">
+            <h2>CELEBRITY RED CARPET LOOKS</h2>
+            <p style="color: #aaa;">As Seen On Hollywood & Global Icons</p>
+        </div>
+
+        <div class="celebrity-grid">
+            <div class="celeb-card">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800" alt="Hollywood Red Carpet Look">
+                <div class="celeb-info">
+                    <h3>Cannes Red Carpet Elegance</h3>
+                    <p>Inspired by Icon Style - Custom Haute Couture</p>
+                </div>
+            </div>
+
+            <div class="celeb-card">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800" alt="Met Gala Fashion">
+                <div class="celeb-info">
+                    <h3>Met Gala Special Edition</h3>
+                    <p>Hand-embroidered Gold Silk Masterpiece</p>
+                </div>
+            </div>
+
+            <div class="celeb-card">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800" alt="Paris Fashion Week">
+                <div class="celeb-info">
+                    <h3>Paris Fashion Week Exclusive</h3>
+                    <p>Modern Chic Luxury Couture</p>
+                </div>
             </div>
         </div>
     </div>
@@ -366,42 +518,103 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>SHOP</h4>
+                <h4>SHOP LUXE</h4>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Tops & Dresses</a></li>
-                    <li><a href="#">Swim Wear</a></li>
-                    <li><a href="#">Accessories</a></li>
+                    <li><a href="#">Haute Couture</a></li>
+                    <li><a href="#">Dior Style Dresses</a></li>
+                    <li><a href="#">Red Carpet Collection</a></li>
+                    <li><a onclick="openShippingModal()">Worldwide Shipping</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>INFORMATION</h4>
+                <h4>CUSTOMER CARE</h4>
                 <ul>
-                    <li><a href="#">Return Policies</a></li>
-                    <li><a href="#">Shipping</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Terms Of Service</a></li>
+                    <li><a onclick="openContactModal()">Contact Us</a></li>
+                    <li><a onclick="openShippingModal()">Shipping Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
                 </ul>
+                <div style="margin-top: 15px;">
+                    <span style="font-size: 11px; color: #777;">OFFICIAL EMAIL:</span><br>
+                    <div class="email-display">info.luxelife@proton.me</div>
+                </div>
             </div>
 
             <div class="footer-col">
-                <h4>NEWSLETTER SIGN UP</h4>
-                <p style="color: #aaa; font-size: 12px; margin-bottom: 15px;">
-                    Sign up for exclusive updates, new arrivals & insider discounts
+                <h4>LUXE VOGUE MAGAZINE</h4>
+                <p style="color: #aaa; font-size: 12px; margin-bottom: 15px; line-height: 1.6;">
+                    Subscribe to receive invitations to private runway shows, luxury couture releases & fashion news.
                 </p>
-                <div class="newsletter-box">
-                    <input type="email" placeholder="enter your email address">
-                    <button type="button">SUBMIT</button>
+                <div style="display: flex; gap: 10px;">
+                    <input type="email" placeholder="Enter your email" style="padding: 10px; background: #222; border: 1px solid #333; color: #fff; width: 70%; font-size: 12px;">
+                    <button style="padding: 10px 15px; background: #fff; color: #000; border: none; font-weight: bold; cursor: pointer; font-size: 11px;">JOIN</button>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
-            <p>All Rights Reserved. Created By Luxe Branding Co.</p>
+            <p>© LUXE VOGUE FASHION. ALL RIGHTS RESERVED.</p>
+            <p style="margin-top: 5px; color: #555;">Contact: info.luxelife@proton.me</p>
         </div>
     </footer>
 
+    <!-- CONTACT MODAL -->
+    <div class="modal-overlay" id="contactModal">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeModals()">&times;</span>
+            <h3>CONTACT LUXE VOGUE</h3>
+            <p>For haute couture inquiries, celebrity styling, or orders, please contact our private concierge at:</p>
+            <div class="email-display" style="font-size: 16px; padding: 12px 20px;">info.luxelife@proton.me</div>
+        </div>
+    </div>
+
+    <!-- SHIPPING MODAL -->
+    <div class="modal-overlay" id="shippingModal">
+        <div class="modal-box">
+            <span class="close-btn" onclick="closeModals()">&times;</span>
+            <h3>WORLDWIDE SHIPPING POLICY</h3>
+            <p>We offer express DHL/FedEx insured shipping to all international destinations listed below:</p>
+            
+            <div class="country-list">
+                ✔ United States<br>
+                ✔ United Kingdom<br>
+                ✔ France (Paris)<br>
+                ✔ Italy (Milan)<br>
+                ✔ United Arab Emirates (Dubai)<br>
+                ✔ Saudi Arabia<br>
+                ✔ Qatar & Kuwait<br>
+                ✔ Germany, Switzerland & Europe<br>
+                ✔ Canada & Australia<br>
+                ✔ Japan & South Korea<br>
+                ✔ All Other Global Destinations...
+            </div>
+
+            <div class="excluded-tag">
+                ⚠️ Notice: Shipping is available to ALL countries worldwide EXCEPT Iraq.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openContactModal() {
+            document.getElementById('contactModal').style.display = 'flex';
+        }
+
+        function openShippingModal() {
+            document.getElementById('shippingModal').style.display = 'flex';
+        }
+
+        function closeModals() {
+            document.getElementById('contactModal').style.display = 'none';
+            document.getElementById('shippingModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                closeModals();
+            }
+        }
+    </script>
 </body>
 </html>
