@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE VOGUE | High Fashion & Celebrity Couture</title>
+    <title>LUXE VOGUE | Luxury Party Dresses & Haute Couture</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Playfair Display', 'Didot', 'Helvetica Neue', serif, sans-serif;
+            font-family: 'Didot', 'Playfair Display', 'Helvetica Neue', serif, sans-serif;
         }
 
         body {
@@ -24,7 +24,7 @@
             background-color: #000000;
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: 8px;
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -34,12 +34,12 @@
         /* Header / Logo */
         header {
             text-align: center;
-            padding: 30px 20px 15px;
+            padding: 25px 20px 10px;
             border-bottom: 1px solid #eee;
         }
 
         .brand-logo {
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 900;
             letter-spacing: 6px;
             text-transform: uppercase;
@@ -51,8 +51,8 @@
         nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 18px 0;
+            gap: 25px;
+            padding: 15px 0;
             border-bottom: 1px solid #eee;
             font-family: sans-serif;
         }
@@ -62,89 +62,120 @@
             text-decoration: none;
             font-size: 12px;
             font-weight: 600;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
             transition: 0.3s;
             cursor: pointer;
         }
 
         nav a:hover {
-            color: #b89756;
+            color: #e07a5f;
         }
 
         .container {
-            max-width: 1350px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* VOGUE STYLE HERO SECTION (Large LUXE Text + Stunning Model) */
-        .vogue-hero {
+        /* VOGUE MAGAZINE COVER HERO SECTION */
+        .vogue-cover {
             position: relative;
-            height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
+            max-width: 900px;
+            height: 80vh;
+            min-height: 600px;
+            margin: 30px auto;
+            background: #f4f4f4;
             overflow: hidden;
-            background-color: #f7f7f7;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
 
-        /* Huge Text Behind Girl */
-        .vogue-hero .bg-text {
+        /* VOGUE Big Header Behind Model */
+        .vogue-title {
             position: absolute;
-            font-size: 26vw;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 22vw;
+            max-font-size: 200px;
             font-weight: 900;
-            color: rgba(0, 0, 0, 0.08);
-            letter-spacing: -10px;
+            color: #000;
+            letter-spacing: -2px;
             z-index: 1;
-            user-select: none;
             line-height: 0.8;
-            top: 50%;
-            transform: translateY(-50%);
+            user-select: none;
         }
 
-        /* Model Image In Front */
-        .vogue-hero img {
+        /* Model Image */
+        .vogue-cover img {
             position: absolute;
-            height: 95%;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 90%;
             z-index: 2;
             object-fit: contain;
-            bottom: 0;
         }
 
-        .vogue-hero .hero-overlay-content {
+        /* Editorial Magazine Sidebar Texts */
+        .magazine-text-left {
+            position: absolute;
+            top: 30%;
+            left: 30px;
+            z-index: 3;
+            max-width: 200px;
+            font-family: sans-serif;
+            color: #000;
+        }
+
+        .magazine-text-left h4 {
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .magazine-text-left p {
+            font-size: 11px;
+            color: #444;
+            margin-top: 4px;
+            line-height: 1.3;
+        }
+
+        .magazine-text-right {
             position: absolute;
             bottom: 40px;
-            left: 40px;
+            right: 30px;
             z-index: 3;
+            text-align: right;
+            font-family: sans-serif;
             color: #000;
+        }
+
+        .magazine-text-right h2 {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .magazine-text-right p {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Section Header */
+        .section-header {
+            margin: 50px 0 25px;
+            text-align: center;
             font-family: sans-serif;
         }
 
-        .vogue-hero .hero-overlay-content h1 {
-            font-size: 24px;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-weight: 700;
-        }
-
-        .vogue-hero .hero-overlay-content p {
-            font-size: 13px;
-            color: #555;
-            margin-top: 5px;
-        }
-
-        /* Section Title */
-        .section-header {
-            margin: 60px 0 30px;
-            text-align: center;
-            position: relative;
-        }
-
         .section-header h2 {
-            font-size: 24px;
-            letter-spacing: 4px;
+            font-size: 20px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 800;
         }
@@ -152,18 +183,16 @@
         .section-header p {
             font-size: 12px;
             color: #777;
-            letter-spacing: 2px;
-            margin-top: 5px;
-            text-transform: uppercase;
-            font-family: sans-serif;
+            letter-spacing: 1px;
+            margin-top: 4px;
         }
 
-        /* Product Showcase Grid */
+        /* Product Grid */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
             font-family: sans-serif;
         }
 
@@ -174,99 +203,37 @@
 
         .product-card img {
             width: 100%;
-            height: 420px;
+            height: 380px;
             object-fit: cover;
             background-color: #f8f8f8;
             border-radius: 2px;
-            transition: transform 0.4s ease;
+            transition: transform 0.3s ease;
         }
 
         .product-card:hover img {
-            transform: scale(1.02);
+            transform: scale(1.03);
         }
 
         .product-tag {
             font-size: 10px;
-            color: #b89756;
-            letter-spacing: 2px;
-            margin-top: 15px;
+            color: #e07a5f;
+            letter-spacing: 1.5px;
+            margin-top: 12px;
             text-transform: uppercase;
             font-weight: 700;
         }
 
         .product-title {
-            font-size: 14px;
-            margin: 6px 0;
+            font-size: 13px;
+            margin: 5px 0;
             color: #111;
             font-weight: 600;
         }
 
         .product-price {
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
             color: #000;
-        }
-
-        /* CELEBRITY RED CARPET SECTION */
-        .celebrity-section {
-            background-color: #0d0d0d;
-            color: #ffffff;
-            padding: 80px 20px;
-            margin: 60px 0;
-        }
-
-        .celebrity-section .section-header h2 {
-            color: #fff;
-        }
-
-        .celebrity-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            max-width: 1350px;
-            margin: 40px auto 0;
-        }
-
-        .celeb-card {
-            position: relative;
-            overflow: hidden;
-            height: 480px;
-        }
-
-        .celeb-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.9);
-            transition: 0.5s ease;
-        }
-
-        .celeb-card:hover img {
-            transform: scale(1.05);
-            filter: brightness(1);
-        }
-
-        .celeb-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 25px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            font-family: sans-serif;
-        }
-
-        .celeb-info h3 {
-            font-size: 16px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #fff;
-        }
-
-        .celeb-info p {
-            font-size: 12px;
-            color: #ccc;
-            margin-top: 4px;
         }
 
         /* Dark Footer */
@@ -298,7 +265,7 @@
         }
 
         .footer-col ul li {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .footer-col ul li a, .footer-col ul li span {
@@ -318,7 +285,7 @@
             background: #222;
             padding: 8px 12px;
             border-radius: 4px;
-            color: #b89756;
+            color: #e07a5f;
             font-weight: bold;
             font-size: 13px;
             margin-top: 5px;
@@ -327,14 +294,14 @@
         .copyright {
             text-align: center;
             border-top: 1px solid #222;
-            margin-top: 50px;
+            margin-top: 40px;
             padding-top: 20px;
             font-size: 11px;
             color: #666;
             letter-spacing: 1px;
         }
 
-        /* MODAL POPUPS */
+        /* MODALS */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -348,27 +315,13 @@
         .modal-box {
             background: #fff;
             color: #000;
-            padding: 40px;
-            max-width: 550px;
+            padding: 35px;
+            max-width: 500px;
             width: 90%;
             border-radius: 4px;
             position: relative;
             font-family: sans-serif;
             text-align: center;
-        }
-
-        .modal-box h3 {
-            font-size: 20px;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .modal-box p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-            margin-bottom: 20px;
         }
 
         .close-btn {
@@ -377,18 +330,17 @@
             right: 20px;
             font-size: 22px;
             cursor: pointer;
-            color: #000;
         }
 
         .country-list {
-            max-height: 200px;
+            max-height: 180px;
             overflow-y: auto;
             border: 1px solid #eee;
             padding: 10px;
             text-align: left;
-            font-size: 13px;
+            font-size: 12px;
             color: #333;
-            margin-bottom: 15px;
+            margin: 15px 0;
         }
 
         .excluded-tag {
@@ -398,118 +350,128 @@
             font-weight: bold;
             font-size: 12px;
             border-radius: 4px;
-            margin-top: 10px;
         }
 
         @media (max-width: 768px) {
-            .vogue-hero .bg-text { font-size: 35vw; }
-            .vogue-hero img { height: 80%; }
+            .vogue-title { font-size: 30vw; }
+            .vogue-cover { height: 60vh; }
+            .magazine-text-left, .magazine-text-right { display: none; }
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Announcement Bar -->
+    <!-- Top Announcement Bar -->
     <div class="top-bar">
-        Worldwide Express Shipping Available | Exclusive Haute Couture
+        Fast Global Shipping | Exclusive Nightlife & Party Dresses
     </div>
 
-    <!-- Header / Logo -->
+    <!-- Header Logo -->
     <header>
         <a href="#" class="brand-logo">LUXE VOGUE</a>
     </header>
 
-    <!-- Navigation Menu -->
+    <!-- Navigation -->
     <nav>
         <a href="#">Home</a>
-        <a href="#">New Arrivals</a>
-        <a href="#">Haute Couture</a>
+        <a href="#">Party Dresses</a>
+        <a href="#">Club & Bar Looks</a>
         <a href="#">Celebrity Style</a>
         <a onclick="openShippingModal()">Shipping Info</a>
         <a onclick="openContactModal()">Contact Us</a>
     </nav>
 
-    <!-- VOGUE HERO SECTION -->
+    <!-- VOGUE COVER HERO SECTION -->
     <div class="container">
-        <div class="vogue-hero">
-            <div class="bg-text">LUXE</div>
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000" alt="Vogue Fashion Model">
-            <div class="hero-overlay-content">
-                <h1>FALL / WINTER COUTURE</h1>
-                <p>The Ultimate Luxury Experience</p>
+        <div class="vogue-cover">
+            <div class="vogue-title">LUXE</div>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000" alt="Vogue Fashion Cover Model">
+            
+            <div class="magazine-text-left">
+                <h4>THE PARTY ISSUE</h4>
+                <p>Bold Nightlife Looks, Mini Dresses & Glamour</p>
+            </div>
+
+            <div class="magazine-text-right">
+                <h2>RIHANNA</h2>
+                <p>ON FEARLESS STYLE & NIGHTLIFE ELEGANCE</p>
             </div>
         </div>
     </div>
 
-    <!-- LUXURY DRESSES SHOWCASE -->
+    <!-- PARTY & NIGHTCLUB DRESSES SECTION -->
     <div class="container">
         <div class="section-header">
-            <h2>EXCLUSIVE DRESSES & SUITS</h2>
-            <p>Curated Luxury Collection</p>
+            <h2>PARTY & CLUBBING DRESSES</h2>
+            <p>Hot Mini Dresses, Sequins & Nightlife Fashion</p>
         </div>
 
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600" alt="Dior Inspired Silk Gown">
-                <div class="product-tag">HAUTE COUTURE</div>
-                <div class="product-title">Dior Inspired Emerald Silk Gown</div>
-                <div class="product-price">$3,400.00</div>
+                <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600" alt="Party Dress">
+                <div class="product-tag">PARTY MINI</div>
+                <div class="product-title">Sparkly Diamond Mesh Mini Dress</div>
+                <div class="product-price">$45.00</div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=600" alt="Sparkling Evening Dress">
-                <div class="product-tag">ROYAL EDITION</div>
-                <div class="product-title">Sparkling Crystal Evening Dress</div>
-                <div class="product-price">$2,850.00</div>
+                <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=600" alt="Club Dress">
+                <div class="product-tag">NIGHTCLUB SPECIAL</div>
+                <div class="product-title">Satin Backless Cocktail Dress</div>
+                <div class="product-price">$40.00</div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600" alt="Velvet Runway Dress">
-                <div class="product-tag">PARIS RUNWAY</div>
-                <div class="product-title">Midnight Velvet Runway Dress</div>
-                <div class="product-price">$4,100.00</div>
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600" alt="Short Dress">
+                <div class="product-tag">HOT ARRIVAL</div>
+                <div class="product-title">Glitter Sequin Bodycon Mini</div>
+                <div class="product-price">$55.00</div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600" alt="Gala Silk Corset">
-                <div class="product-tag">EXCLUSIVE</div>
-                <div class="product-title">Gala Golden Silk Corset Mini</div>
-                <div class="product-price">$1,950.00</div>
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600" alt="Cutout Dress">
+                <div class="product-tag">BAR & LOUNGE</div>
+                <div class="product-title">Black Cutout Nightlife Mini Dress</div>
+                <div class="product-price">$38.00</div>
             </div>
         </div>
     </div>
 
-    <!-- CELEBRITY / RED CARPET SECTION -->
-    <div class="celebrity-section">
+    <!-- CELEBRITY LOOKS SECTION -->
+    <div class="container">
         <div class="section-header">
-            <h2>CELEBRITY RED CARPET LOOKS</h2>
-            <p style="color: #aaa;">As Seen On Hollywood & Global Icons</p>
+            <h2>CELEBRITY & RED CARPET STYLE</h2>
+            <p>As Seen On Celebrities & Top Models</p>
         </div>
 
-        <div class="celebrity-grid">
-            <div class="celeb-card">
-                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800" alt="Hollywood Red Carpet Look">
-                <div class="celeb-info">
-                    <h3>Cannes Red Carpet Elegance</h3>
-                    <p>Inspired by Icon Style - Custom Haute Couture</p>
-                </div>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=600" alt="Model">
+                <div class="product-tag">CELEB LOOK</div>
+                <div class="product-title">Emerald Silk Gala Dress</div>
+                <div class="product-price">$65.00</div>
             </div>
 
-            <div class="celeb-card">
-                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800" alt="Met Gala Fashion">
-                <div class="celeb-info">
-                    <h3>Met Gala Special Edition</h3>
-                    <p>Hand-embroidered Gold Silk Masterpiece</p>
-                </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=600" alt="Model">
+                <div class="product-tag">VOGUE FEATURED</div>
+                <div class="product-title">Golden Feather Party Set</div>
+                <div class="product-price">$75.00</div>
             </div>
 
-            <div class="celeb-card">
-                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800" alt="Paris Fashion Week">
-                <div class="celeb-info">
-                    <h3>Paris Fashion Week Exclusive</h3>
-                    <p>Modern Chic Luxury Couture</p>
-                </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600" alt="Model">
+                <div class="product-tag">PARIS RUNWAY</div>
+                <div class="product-title">Chic Velvet Corset Dress</div>
+                <div class="product-price">$50.00</div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600" alt="Model">
+                <div class="product-tag">LIMITED EDITION</div>
+                <div class="product-title">Silver Crystal Bodycon Mini</div>
+                <div class="product-price">$60.00</div>
             </div>
         </div>
     </div>
@@ -520,10 +482,10 @@
             <div class="footer-col">
                 <h4>SHOP LUXE</h4>
                 <ul>
-                    <li><a href="#">Haute Couture</a></li>
-                    <li><a href="#">Dior Style Dresses</a></li>
-                    <li><a href="#">Red Carpet Collection</a></li>
-                    <li><a onclick="openShippingModal()">Worldwide Shipping</a></li>
+                    <li><a href="#">Party Mini Dresses</a></li>
+                    <li><a href="#">Club & Bar Outfits</a></li>
+                    <li><a href="#">Celebrity Collections</a></li>
+                    <li><a onclick="openShippingModal()">Global Express Shipping</a></li>
                 </ul>
             </div>
 
@@ -532,7 +494,6 @@
                 <ul>
                     <li><a onclick="openContactModal()">Contact Us</a></li>
                     <li><a onclick="openShippingModal()">Shipping Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
                 </ul>
                 <div style="margin-top: 15px;">
                     <span style="font-size: 11px; color: #777;">OFFICIAL EMAIL:</span><br>
@@ -542,8 +503,8 @@
 
             <div class="footer-col">
                 <h4>LUXE VOGUE MAGAZINE</h4>
-                <p style="color: #aaa; font-size: 12px; margin-bottom: 15px; line-height: 1.6;">
-                    Subscribe to receive invitations to private runway shows, luxury couture releases & fashion news.
+                <p style="color: #aaa; font-size: 12px; margin-bottom: 15px;">
+                    Subscribe for exclusive VIP access, party dress drops & celebrity style updates.
                 </p>
                 <div style="display: flex; gap: 10px;">
                     <input type="email" placeholder="Enter your email" style="padding: 10px; background: #222; border: 1px solid #333; color: #fff; width: 70%; font-size: 12px;">
@@ -554,7 +515,7 @@
 
         <div class="copyright">
             <p>© LUXE VOGUE FASHION. ALL RIGHTS RESERVED.</p>
-            <p style="margin-top: 5px; color: #555;">Contact: info.luxelife@proton.me</p>
+            <p style="margin-top: 5px; color: #555;">Official Contact: info.luxelife@proton.me</p>
         </div>
     </footer>
 
@@ -563,8 +524,8 @@
         <div class="modal-box">
             <span class="close-btn" onclick="closeModals()">&times;</span>
             <h3>CONTACT LUXE VOGUE</h3>
-            <p>For haute couture inquiries, celebrity styling, or orders, please contact our private concierge at:</p>
-            <div class="email-display" style="font-size: 16px; padding: 12px 20px;">info.luxelife@proton.me</div>
+            <p>For custom orders, stylist requests, or inquiries, reach out to us at:</p>
+            <div class="email-display" style="font-size: 15px; padding: 10px 18px;">info.luxelife@proton.me</div>
         </div>
     </div>
 
@@ -572,25 +533,19 @@
     <div class="modal-overlay" id="shippingModal">
         <div class="modal-box">
             <span class="close-btn" onclick="closeModals()">&times;</span>
-            <h3>WORLDWIDE SHIPPING POLICY</h3>
-            <p>We offer express DHL/FedEx insured shipping to all international destinations listed below:</p>
+            <h3>GLOBAL SHIPPING POLICY</h3>
+            <p>We deliver express shipments via DHL / FedEx to countries worldwide:</p>
             
             <div class="country-list">
-                ✔ United States<br>
-                ✔ United Kingdom<br>
-                ✔ France (Paris)<br>
-                ✔ Italy (Milan)<br>
-                ✔ United Arab Emirates (Dubai)<br>
-                ✔ Saudi Arabia<br>
-                ✔ Qatar & Kuwait<br>
-                ✔ Germany, Switzerland & Europe<br>
-                ✔ Canada & Australia<br>
-                ✔ Japan & South Korea<br>
+                ✔ United States & Canada<br>
+                ✔ United Kingdom & Europe<br>
+                ✔ United Arab Emirates, Saudi Arabia & Gulf<br>
+                ✔ Australia & East Asia<br>
                 ✔ All Other Global Destinations...
             </div>
 
             <div class="excluded-tag">
-                ⚠️ Notice: Shipping is available to ALL countries worldwide EXCEPT Iraq.
+                ⚠️ Shipping is available worldwide EXCEPT to Iraq.
             </div>
         </div>
     </div>
@@ -609,7 +564,6 @@
             document.getElementById('shippingModal').style.display = 'none';
         }
 
-        // Close modal when clicking outside
         window.onclick = function(event) {
             if (event.target.classList.contains('modal-overlay')) {
                 closeModals();
