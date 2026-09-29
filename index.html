@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE VOGUE | Luxury Party Dresses & Haute Couture</title>
+    <title>LUXE VOGUE | Sharon Formoso Collection</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Didot', 'Playfair Display', 'Helvetica Neue', serif, sans-serif;
+            font-family: 'Didot', 'Playfair Display', 'Bodoni MT', serif, sans-serif;
         }
 
         body {
@@ -19,9 +19,9 @@
             overflow-x: hidden;
         }
 
-        /* Top Bar */
+        /* Announcement Bar */
         .top-bar {
-            background-color: #000000;
+            background-color: #000;
             color: #fff;
             text-align: center;
             padding: 8px;
@@ -31,10 +31,10 @@
             font-family: sans-serif;
         }
 
-        /* Header / Logo */
+        /* Header Logo */
         header {
             text-align: center;
-            padding: 25px 20px 10px;
+            padding: 20px 20px 10px;
             border-bottom: 1px solid #eee;
         }
 
@@ -47,7 +47,7 @@
             text-decoration: none;
         }
 
-        /* Navigation */
+        /* Navigation Menu */
         nav {
             display: flex;
             justify-content: center;
@@ -60,67 +60,69 @@
         nav a {
             color: #111;
             text-decoration: none;
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 1px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
             text-transform: uppercase;
             transition: 0.3s;
             cursor: pointer;
         }
 
         nav a:hover {
-            color: #e07a5f;
+            color: #d4af37;
         }
 
         .container {
-            max-width: 1300px;
+            max-width: 1250px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* VOGUE MAGAZINE COVER HERO SECTION */
-        .vogue-cover {
+        /* REAL VOGUE MAGAZINE COVER HERO SECTION */
+        .vogue-magazine-hero {
             position: relative;
-            max-width: 900px;
-            height: 80vh;
-            min-height: 600px;
+            max-width: 850px;
+            height: 85vh;
+            min-height: 580px;
             margin: 30px auto;
             background: #f4f4f4;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
-        /* VOGUE Big Header Behind Model */
-        .vogue-title {
+        /* VOGUE Title Behind Model */
+        .vogue-cover-title {
             position: absolute;
-            top: -10px;
+            top: 0;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 22vw;
-            max-font-size: 200px;
+            font-size: 26vw;
+            line-height: 0.75;
             font-weight: 900;
-            color: #000;
-            letter-spacing: -2px;
+            color: #000000;
+            letter-spacing: -3px;
             z-index: 1;
-            line-height: 0.8;
             user-select: none;
+            width: 100%;
+            text-align: center;
         }
 
-        /* Model Image */
-        .vogue-cover img {
+        /* Model Image Layer */
+        .vogue-magazine-hero img {
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            height: 90%;
+            height: 94%;
             z-index: 2;
             object-fit: contain;
         }
 
-        /* Editorial Magazine Sidebar Texts */
-        .magazine-text-left {
+        /* Magazine Cover Texts */
+        .cover-text-left {
             position: absolute;
-            top: 30%;
+            top: 35%;
             left: 30px;
             z-index: 3;
             max-width: 200px;
@@ -128,23 +130,23 @@
             color: #000;
         }
 
-        .magazine-text-left h4 {
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
+        .cover-text-left h3 {
+            font-size: 15px;
+            font-weight: 900;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .magazine-text-left p {
+        .cover-text-left p {
             font-size: 11px;
-            color: #444;
-            margin-top: 4px;
+            color: #333;
+            margin-top: 5px;
             line-height: 1.3;
         }
 
-        .magazine-text-right {
+        .cover-text-bottom {
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             right: 30px;
             z-index: 3;
             text-align: right;
@@ -152,21 +154,21 @@
             color: #000;
         }
 
-        .magazine-text-right h2 {
-            font-size: 32px;
+        .cover-text-bottom h2 {
+            font-size: 26px;
             font-weight: 900;
             letter-spacing: 2px;
             text-transform: uppercase;
         }
 
-        .magazine-text-right p {
-            font-size: 12px;
+        .cover-text-bottom p {
+            font-size: 11px;
             letter-spacing: 1px;
+            font-weight: 700;
             text-transform: uppercase;
-            font-weight: 600;
         }
 
-        /* Section Header */
+        /* Section Title */
         .section-header {
             margin: 50px 0 25px;
             text-align: center;
@@ -198,15 +200,13 @@
 
         .product-card {
             text-align: center;
-            position: relative;
         }
 
         .product-card img {
             width: 100%;
-            height: 380px;
+            height: 400px;
             object-fit: cover;
             background-color: #f8f8f8;
-            border-radius: 2px;
             transition: transform 0.3s ease;
         }
 
@@ -216,7 +216,7 @@
 
         .product-tag {
             font-size: 10px;
-            color: #e07a5f;
+            color: #d4af37;
             letter-spacing: 1.5px;
             margin-top: 12px;
             text-transform: uppercase;
@@ -240,7 +240,7 @@
         footer {
             background-color: #111111;
             color: #ffffff;
-            padding: 60px 40px 20px;
+            padding: 50px 40px 20px;
             font-family: sans-serif;
         }
 
@@ -253,10 +253,10 @@
         }
 
         .footer-col h4 {
-            font-size: 12px;
+            font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             color: #fff;
         }
 
@@ -271,7 +271,7 @@
         .footer-col ul li a, .footer-col ul li span {
             color: #999;
             text-decoration: none;
-            font-size: 13px;
+            font-size: 12px;
             transition: 0.2s;
             cursor: pointer;
         }
@@ -285,7 +285,7 @@
             background: #222;
             padding: 8px 12px;
             border-radius: 4px;
-            color: #e07a5f;
+            color: #d4af37;
             font-weight: bold;
             font-size: 13px;
             margin-top: 5px;
@@ -306,7 +306,7 @@
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.8);
+            background: rgba(0,0,0,0.85);
             z-index: 9999;
             justify-content: center;
             align-items: center;
@@ -316,9 +316,8 @@
             background: #fff;
             color: #000;
             padding: 35px;
-            max-width: 500px;
+            max-width: 480px;
             width: 90%;
-            border-radius: 4px;
             position: relative;
             font-family: sans-serif;
             text-align: center;
@@ -349,143 +348,99 @@
             padding: 8px;
             font-weight: bold;
             font-size: 12px;
-            border-radius: 4px;
         }
 
         @media (max-width: 768px) {
-            .vogue-title { font-size: 30vw; }
-            .vogue-cover { height: 60vh; }
-            .magazine-text-left, .magazine-text-right { display: none; }
+            .vogue-cover-title { font-size: 32vw; }
+            .vogue-magazine-hero { height: 60vh; }
+            .cover-text-left, .cover-text-bottom { display: none; }
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
     <div class="top-bar">
-        Fast Global Shipping | Exclusive Nightlife & Party Dresses
+        Worldwide Express Shipping Available | Sharon Formoso Signature Collection
     </div>
 
-    <!-- Header Logo -->
     <header>
         <a href="#" class="brand-logo">LUXE VOGUE</a>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <a href="#">Home</a>
-        <a href="#">Party Dresses</a>
-        <a href="#">Club & Bar Looks</a>
-        <a href="#">Celebrity Style</a>
+        <a href="#">Sharon Formoso Collection</a>
+        <a href="#">Party Mini Dresses</a>
         <a onclick="openShippingModal()">Shipping Info</a>
         <a onclick="openContactModal()">Contact Us</a>
     </nav>
 
-    <!-- VOGUE COVER HERO SECTION -->
+    <!-- REAL VOGUE COVER HERO WITH SHARON FORMOSO -->
     <div class="container">
-        <div class="vogue-cover">
-            <div class="vogue-title">LUXE</div>
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000" alt="Vogue Fashion Cover Model">
+        <div class="vogue-magazine-hero">
+            <div class="vogue-cover-title">LUXE</div>
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000" alt="Sharon Formoso Vogue Cover">
             
-            <div class="magazine-text-left">
-                <h4>THE PARTY ISSUE</h4>
-                <p>Bold Nightlife Looks, Mini Dresses & Glamour</p>
+            <div class="cover-text-left">
+                <h3>THE SPECIAL ISSUE</h3>
+                <p>Haute Couture, Nightlife Glamour & Silk Corsets</p>
             </div>
 
-            <div class="magazine-text-right">
-                <h2>RIHANNA</h2>
-                <p>ON FEARLESS STYLE & NIGHTLIFE ELEGANCE</p>
+            <div class="cover-text-bottom">
+                <h2>SHARON FORMOSO</h2>
+                <p>STARLOOK & ELEGANCE IN RED SATIN</p>
             </div>
         </div>
     </div>
 
-    <!-- PARTY & NIGHTCLUB DRESSES SECTION -->
+    <!-- SHARON FORMOSO COLLECTION -->
     <div class="container">
         <div class="section-header">
-            <h2>PARTY & CLUBBING DRESSES</h2>
-            <p>Hot Mini Dresses, Sequins & Nightlife Fashion</p>
+            <h2>SHARON FORMOSO SIGNATURE COLLECTION</h2>
+            <p>Exclusive Red Satin & Black Halter Dresses</p>
         </div>
 
         <div class="product-grid">
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600" alt="Party Dress">
-                <div class="product-tag">PARTY MINI</div>
-                <div class="product-title">Sparkly Diamond Mesh Mini Dress</div>
-                <div class="product-price">$45.00</div>
+                <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=600" alt="Sharon Formoso Red Satin Corset">
+                <div class="product-tag">SHARON FORMOSO LOOK</div>
+                <div class="product-title">Red Satin Corset Ruched Gown</div>
+                <div class="product-price">$58.00</div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?q=80&w=600" alt="Club Dress">
-                <div class="product-tag">NIGHTCLUB SPECIAL</div>
-                <div class="product-title">Satin Backless Cocktail Dress</div>
-                <div class="product-price">$40.00</div>
+                <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=600" alt="Sharon Formoso Halter Dress">
+                <div class="product-tag">STAR EDITION</div>
+                <div class="product-title">Black Silk Halter Neck Evening Dress</div>
+                <div class="product-price">$48.00</div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600" alt="Short Dress">
-                <div class="product-tag">HOT ARRIVAL</div>
-                <div class="product-title">Glitter Sequin Bodycon Mini</div>
-                <div class="product-price">$55.00</div>
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=600" alt="Sharon Formoso Red Backless">
+                <div class="product-tag">NIGHTLIFE SPECIAL</div>
+                <div class="product-title">Red Silk Corset Backless Dress</div>
+                <div class="product-price">$52.00</div>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600" alt="Cutout Dress">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=600" alt="Bar Party Dress">
                 <div class="product-tag">BAR & LOUNGE</div>
-                <div class="product-title">Black Cutout Nightlife Mini Dress</div>
-                <div class="product-price">$38.00</div>
+                <div class="product-title">Sparkling Black Cutout Mini Dress</div>
+                <div class="product-price">$42.00</div>
             </div>
         </div>
     </div>
 
-    <!-- CELEBRITY LOOKS SECTION -->
-    <div class="container">
-        <div class="section-header">
-            <h2>CELEBRITY & RED CARPET STYLE</h2>
-            <p>As Seen On Celebrities & Top Models</p>
-        </div>
-
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=600" alt="Model">
-                <div class="product-tag">CELEB LOOK</div>
-                <div class="product-title">Emerald Silk Gala Dress</div>
-                <div class="product-price">$65.00</div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=600" alt="Model">
-                <div class="product-tag">VOGUE FEATURED</div>
-                <div class="product-title">Golden Feather Party Set</div>
-                <div class="product-price">$75.00</div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=600" alt="Model">
-                <div class="product-tag">PARIS RUNWAY</div>
-                <div class="product-title">Chic Velvet Corset Dress</div>
-                <div class="product-price">$50.00</div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=600" alt="Model">
-                <div class="product-tag">LIMITED EDITION</div>
-                <div class="product-title">Silver Crystal Bodycon Mini</div>
-                <div class="product-price">$60.00</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Dark Footer -->
+    <!-- FOOTER -->
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
                 <h4>SHOP LUXE</h4>
                 <ul>
+                    <li><a href="#">Sharon Formoso Collection</a></li>
                     <li><a href="#">Party Mini Dresses</a></li>
                     <li><a href="#">Club & Bar Outfits</a></li>
-                    <li><a href="#">Celebrity Collections</a></li>
-                    <li><a onclick="openShippingModal()">Global Express Shipping</a></li>
                 </ul>
             </div>
 
@@ -495,79 +450,67 @@
                     <li><a onclick="openContactModal()">Contact Us</a></li>
                     <li><a onclick="openShippingModal()">Shipping Policy</a></li>
                 </ul>
-                <div style="margin-top: 15px;">
-                    <span style="font-size: 11px; color: #777;">OFFICIAL EMAIL:</span><br>
+                <div style="margin-top: 12px;">
+                    <span style="font-size: 10px; color: #777;">OFFICIAL EMAIL:</span><br>
                     <div class="email-display">info.luxelife@proton.me</div>
                 </div>
             </div>
 
             <div class="footer-col">
                 <h4>LUXE VOGUE MAGAZINE</h4>
-                <p style="color: #aaa; font-size: 12px; margin-bottom: 15px;">
-                    Subscribe for exclusive VIP access, party dress drops & celebrity style updates.
+                <p style="color: #aaa; font-size: 12px; margin-bottom: 12px;">
+                    Subscribe for exclusive updates & VIP drops.
                 </p>
-                <div style="display: flex; gap: 10px;">
-                    <input type="email" placeholder="Enter your email" style="padding: 10px; background: #222; border: 1px solid #333; color: #fff; width: 70%; font-size: 12px;">
-                    <button style="padding: 10px 15px; background: #fff; color: #000; border: none; font-weight: bold; cursor: pointer; font-size: 11px;">JOIN</button>
+                <div style="display: flex; gap: 8px;">
+                    <input type="email" placeholder="Enter your email" style="padding: 8px; background: #222; border: 1px solid #333; color: #fff; width: 70%; font-size: 11px;">
+                    <button style="padding: 8px 12px; background: #fff; color: #000; border: none; font-weight: bold; cursor: pointer; font-size: 11px;">JOIN</button>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
             <p>© LUXE VOGUE FASHION. ALL RIGHTS RESERVED.</p>
-            <p style="margin-top: 5px; color: #555;">Official Contact: info.luxelife@proton.me</p>
+            <p style="margin-top: 4px; color: #555;">Contact: info.luxelife@proton.me</p>
         </div>
     </footer>
 
-    <!-- CONTACT MODAL -->
+    <!-- MODALS -->
     <div class="modal-overlay" id="contactModal">
         <div class="modal-box">
             <span class="close-btn" onclick="closeModals()">&times;</span>
-            <h3>CONTACT LUXE VOGUE</h3>
-            <p>For custom orders, stylist requests, or inquiries, reach out to us at:</p>
-            <div class="email-display" style="font-size: 15px; padding: 10px 18px;">info.luxelife@proton.me</div>
+            <h3 style="letter-spacing: 2px; font-size: 18px; margin-bottom: 10px;">CONTACT LUXE VOGUE</h3>
+            <p style="font-size: 13px; color: #555;">For custom orders or inquiries, please contact us at:</p>
+            <div class="email-display" style="font-size: 15px; padding: 10px 18px; margin-top: 15px;">info.luxelife@proton.me</div>
         </div>
     </div>
 
-    <!-- SHIPPING MODAL -->
     <div class="modal-overlay" id="shippingModal">
         <div class="modal-box">
             <span class="close-btn" onclick="closeModals()">&times;</span>
-            <h3>GLOBAL SHIPPING POLICY</h3>
-            <p>We deliver express shipments via DHL / FedEx to countries worldwide:</p>
-            
+            <h3 style="letter-spacing: 2px; font-size: 18px; margin-bottom: 10px;">SHIPPING POLICY</h3>
+            <p style="font-size: 12px; color: #555;">Worldwide insured shipping via DHL / FedEx:</p>
             <div class="country-list">
-                ✔ United States & Canada<br>
-                ✔ United Kingdom & Europe<br>
-                ✔ United Arab Emirates, Saudi Arabia & Gulf<br>
+                ✔ USA & Canada<br>
+                ✔ UK & European Union<br>
+                ✔ UAE, Saudi Arabia, Qatar, Kuwait<br>
                 ✔ Australia & East Asia<br>
-                ✔ All Other Global Destinations...
+                ✔ All Other Countries Globally
             </div>
-
             <div class="excluded-tag">
-                ⚠️ Shipping is available worldwide EXCEPT to Iraq.
+                ⚠️ Notice: Available worldwide EXCEPT to Iraq.
             </div>
         </div>
     </div>
 
     <script>
-        function openContactModal() {
-            document.getElementById('contactModal').style.display = 'flex';
-        }
-
-        function openShippingModal() {
-            document.getElementById('shippingModal').style.display = 'flex';
-        }
-
+        function openContactModal() { document.getElementById('contactModal').style.display = 'flex'; }
+        function openShippingModal() { document.getElementById('shippingModal').style.display = 'flex'; }
         function closeModals() {
             document.getElementById('contactModal').style.display = 'none';
             document.getElementById('shippingModal').style.display = 'none';
         }
-
         window.onclick = function(event) {
-            if (event.target.classList.contains('modal-overlay')) {
-                closeModals();
-            }
+            if (event.target.classList.contains('modal-overlay')) { closeModals(); }
         }
     </script>
 </body>
