@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE LIFE | Sharon Formoso Collection</title>
+    <title>LUXE VOGUE | Sharon Formoso Collection</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Didot', 'Playfair Display', 'Bodoni MT', serif, Georgia, serif;
+            font-family: 'Didot', 'Playfair Display', 'Bodoni MT', serif, sans-serif;
         }
 
         body {
@@ -19,42 +19,42 @@
             overflow-x: hidden;
         }
 
-        /* Top Bar */
+        /* Announcement Bar */
         .top-bar {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: #000;
+            color: #fff;
             text-align: center;
-            padding: 9px;
+            padding: 8px;
             font-size: 11px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
         }
 
-        /* Header */
+        /* Header Logo */
         header {
             text-align: center;
-            padding: 25px 20px 15px;
-            border-bottom: 1px solid #eaeaea;
+            padding: 20px 20px 10px;
+            border-bottom: 1px solid #eee;
         }
 
         .brand-logo {
-            font-size: 36px;
+            font-size: 38px;
             font-weight: 900;
-            letter-spacing: 7px;
+            letter-spacing: 6px;
             text-transform: uppercase;
             color: #000;
             text-decoration: none;
         }
 
-        /* Navigation */
+        /* Navigation Menu */
         nav {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 25px;
             padding: 15px 0;
-            border-bottom: 1px solid #eaeaea;
-            font-family: Arial, sans-serif;
+            border-bottom: 1px solid #eee;
+            font-family: sans-serif;
         }
 
         nav a {
@@ -64,7 +64,7 @@
             font-weight: 700;
             letter-spacing: 2px;
             text-transform: uppercase;
-            transition: color 0.3s;
+            transition: 0.3s;
             cursor: pointer;
         }
 
@@ -73,112 +73,110 @@
         }
 
         .container {
-            max-width: 1100px;
+            max-width: 1250px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* FIXED MAGAZINE COVER HERO */
-        .vogue-hero-container {
+        /* REAL VOGUE MAGAZINE COVER HERO SECTION */
+        .vogue-magazine-hero {
             position: relative;
-            width: 100%;
-            max-width: 750px;
-            height: 680px;
-            margin: 40px auto;
-            background: #f7f7f7;
+            max-width: 850px;
+            height: 85vh;
+            min-height: 580px;
+            margin: 30px auto;
+            background: #f4f4f4;
             overflow: hidden;
-            border: 1px solid #e0e0e0;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
         }
 
-        /* Balanced LUXE Text */
+        /* VOGUE Title Behind Model */
         .vogue-cover-title {
             position: absolute;
-            top: 5px;
-            left: 0;
-            width: 100%;
-            font-size: 140px;
-            line-height: 0.9;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 26vw;
+            line-height: 0.75;
             font-weight: 900;
             color: #000000;
-            letter-spacing: 4px;
+            letter-spacing: -3px;
             z-index: 1;
-            text-align: center;
             user-select: none;
+            width: 100%;
+            text-align: center;
         }
 
-        /* Model Image Container */
-        .vogue-hero-container img {
+        /* Model Image Layer */
+        .vogue-magazine-hero img {
             position: absolute;
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            height: 88%;
-            max-width: 100%;
+            height: 98%;
             z-index: 2;
             object-fit: contain;
         }
 
-        /* Cover Text Overlays */
+        /* Magazine Cover Texts */
         .cover-text-left {
             position: absolute;
-            top: 40%;
-            left: 35px;
+            top: 35%;
+            left: 30px;
             z-index: 3;
-            max-width: 220px;
-            font-family: Arial, sans-serif;
+            max-width: 200px;
+            font-family: sans-serif;
+            color: #000;
         }
 
         .cover-text-left h3 {
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 900;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            color: #000;
         }
 
         .cover-text-left p {
             font-size: 11px;
-            color: #444;
-            margin-top: 6px;
-            line-height: 1.4;
+            color: #333;
+            margin-top: 5px;
+            line-height: 1.3;
         }
 
         .cover-text-bottom {
             position: absolute;
-            bottom: 35px;
-            right: 35px;
+            bottom: 30px;
+            right: 30px;
             z-index: 3;
             text-align: right;
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
+            color: #000;
         }
 
         .cover-text-bottom h2 {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 900;
             letter-spacing: 2px;
             text-transform: uppercase;
-            color: #000;
         }
 
         .cover-text-bottom p {
             font-size: 11px;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
             font-weight: 700;
             text-transform: uppercase;
-            color: #666;
-            margin-top: 4px;
         }
 
         /* Section Title */
         .section-header {
-            margin: 60px 0 30px;
+            margin: 50px 0 25px;
             text-align: center;
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
         }
 
         .section-header h2 {
-            font-size: 18px;
+            font-size: 20px;
             letter-spacing: 3px;
             text-transform: uppercase;
             font-weight: 800;
@@ -186,58 +184,48 @@
 
         .section-header p {
             font-size: 12px;
-            color: #888;
+            color: #777;
             letter-spacing: 1px;
-            margin-top: 6px;
+            margin-top: 4px;
         }
 
         /* Product Grid */
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-bottom: 70px;
-            font-family: Arial, sans-serif;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+            font-family: sans-serif;
         }
 
         .product-card {
             text-align: center;
         }
 
-        .product-card-img-wrapper {
-            width: 100%;
-            height: 420px;
-            background-color: #f2f2f2;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #eee;
-        }
-
         .product-card img {
             width: 100%;
-            height: 100%;
+            height: 400px;
             object-fit: cover;
-            transition: transform 0.4s ease;
+            background-color: #f8f8f8;
+            transition: transform 0.3s ease;
         }
 
         .product-card:hover img {
-            transform: scale(1.04);
+            transform: scale(1.03);
         }
 
         .product-tag {
             font-size: 10px;
             color: #d4af37;
             letter-spacing: 1.5px;
-            margin-top: 15px;
+            margin-top: 12px;
             text-transform: uppercase;
             font-weight: 700;
         }
 
         .product-title {
             font-size: 13px;
-            margin: 6px 0;
+            margin: 5px 0;
             color: #111;
             font-weight: 600;
         }
@@ -248,19 +236,19 @@
             color: #000;
         }
 
-        /* Footer */
+        /* Dark Footer */
         footer {
-            background-color: #0a0a0a;
+            background-color: #111111;
             color: #ffffff;
-            padding: 50px 20px 25px;
-            font-family: Arial, sans-serif;
+            padding: 50px 40px 20px;
+            font-family: sans-serif;
         }
 
         .footer-grid {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 1fr 1fr 1.2fr;
+            grid-template-columns: 1fr 1fr 1.5fr;
             gap: 40px;
         }
 
@@ -280,28 +268,27 @@
             margin-bottom: 10px;
         }
 
-        .footer-col ul li a {
-            color: #888;
+        .footer-col ul li a, .footer-col ul li span {
+            color: #999;
             text-decoration: none;
             font-size: 12px;
             transition: 0.2s;
             cursor: pointer;
         }
 
-        .footer-col ul li a:hover {
+        .footer-col ul li a:hover, .footer-col ul li span:hover {
             color: #fff;
         }
 
         .email-display {
             display: inline-block;
-            background: #1a1a1a;
-            padding: 8px 14px;
+            background: #222;
+            padding: 8px 12px;
             border-radius: 4px;
             color: #d4af37;
             font-weight: bold;
-            font-size: 12px;
-            margin-top: 6px;
-            border: 1px solid #333;
+            font-size: 13px;
+            margin-top: 5px;
         }
 
         .copyright {
@@ -310,11 +297,11 @@
             margin-top: 40px;
             padding-top: 20px;
             font-size: 11px;
-            color: #555;
+            color: #666;
             letter-spacing: 1px;
         }
 
-        /* Modals */
+        /* MODALS */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -329,10 +316,10 @@
             background: #fff;
             color: #000;
             padding: 35px;
-            max-width: 450px;
+            max-width: 480px;
             width: 90%;
             position: relative;
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
             text-align: center;
         }
 
@@ -345,7 +332,7 @@
         }
 
         .country-list {
-            max-height: 160px;
+            max-height: 180px;
             overflow-y: auto;
             border: 1px solid #eee;
             padding: 10px;
@@ -353,7 +340,6 @@
             font-size: 12px;
             color: #333;
             margin: 15px 0;
-            line-height: 1.8;
         }
 
         .excluded-tag {
@@ -365,10 +351,9 @@
         }
 
         @media (max-width: 768px) {
-            .vogue-cover-title { font-size: 70px; }
-            .vogue-hero-container { height: 480px; }
+            .vogue-cover-title { font-size: 32vw; }
+            .vogue-magazine-hero { height: 60vh; }
             .cover-text-left, .cover-text-bottom { display: none; }
-            .product-grid { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
@@ -380,7 +365,7 @@
     </div>
 
     <header>
-        <a href="#" class="brand-logo">LUXE LIFE</a>
+        <a href="#" class="brand-logo">LUXE VOGUE</a>
     </header>
 
     <nav>
@@ -391,11 +376,12 @@
         <a onclick="openContactModal()">Contact Us</a>
     </nav>
 
-    <!-- MAGAZINE COVER HERO -->
+    <!-- REAL VOGUE COVER HERO WITH SHARON FORMOSO -->
     <div class="container">
-        <div class="vogue-hero-container">
+        <div class="vogue-magazine-hero">
             <div class="vogue-cover-title">LUXE</div>
-            <img src="sharon-cover.png" alt="Sharon Formoso Cover" onerror="this.style.display='none'">
+            <!-- تم ربط اسم الصورة المرفوعة في غلاف VOGUE -->
+            <img src="sharon-cover.png" alt="Sharon Formoso Vogue Cover">
             
             <div class="cover-text-left">
                 <h3>THE SPECIAL ISSUE</h3>
@@ -409,7 +395,7 @@
         </div>
     </div>
 
-    <!-- PRODUCTS SECTION -->
+    <!-- SHARON FORMOSO COLLECTION -->
     <div class="container">
         <div class="section-header">
             <h2>SHARON FORMOSO SIGNATURE COLLECTION</h2>
@@ -418,27 +404,21 @@
 
         <div class="product-grid">
             <div class="product-card">
-                <div class="product-card-img-wrapper">
-                    <img src="sharon-red.png" alt="Sharon Formoso Red Satin Corset" onerror="this.src='https://via.placeholder.com/400x500?text=Sharon+Red+Satin'">
-                </div>
+                <img src="sharon-red.png" alt="Sharon Formoso Red Satin Corset">
                 <div class="product-tag">SHARON FORMOSO LOOK</div>
                 <div class="product-title">Red Satin Corset Ruched Gown</div>
                 <div class="product-price">$58.00</div>
             </div>
 
             <div class="product-card">
-                <div class="product-card-img-wrapper">
-                    <img src="sharon-black.png" alt="Sharon Formoso Halter Dress" onerror="this.src='https://via.placeholder.com/400x500?text=Sharon+Black+Halter'">
-                </div>
+                <img src="sharon-black.png" alt="Sharon Formoso Halter Dress">
                 <div class="product-tag">STAR EDITION</div>
                 <div class="product-title">Black Silk Halter Neck Evening Dress</div>
                 <div class="product-price">$48.00</div>
             </div>
 
             <div class="product-card">
-                <div class="product-card-img-wrapper">
-                    <img src="sharon-cover.png" alt="Sharon Formoso Red Backless" onerror="this.src='https://via.placeholder.com/400x500?text=Sharon+Red+Backless'">
-                </div>
+                <img src="sharon-cover.png" alt="Sharon Formoso Red Backless">
                 <div class="product-tag">NIGHTLIFE SPECIAL</div>
                 <div class="product-title">Red Silk Corset Backless Dress</div>
                 <div class="product-price">$52.00</div>
@@ -450,7 +430,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>SHOP LUXE LIFE</h4>
+                <h4>SHOP LUXE</h4>
                 <ul>
                     <li><a href="#">Sharon Formoso Collection</a></li>
                     <li><a href="#">Party Mini Dresses</a></li>
@@ -471,19 +451,19 @@
             </div>
 
             <div class="footer-col">
-                <h4>LUXE LIFE MAGAZINE</h4>
+                <h4>LUXE VOGUE MAGAZINE</h4>
                 <p style="color: #aaa; font-size: 12px; margin-bottom: 12px;">
                     Subscribe for exclusive updates & VIP drops.
                 </p>
                 <div style="display: flex; gap: 8px;">
-                    <input type="email" placeholder="Enter your email" style="padding: 8px; background: #1a1a1a; border: 1px solid #333; color: #fff; width: 70%; font-size: 11px;">
+                    <input type="email" placeholder="Enter your email" style="padding: 8px; background: #222; border: 1px solid #333; color: #fff; width: 70%; font-size: 11px;">
                     <button style="padding: 8px 12px; background: #fff; color: #000; border: none; font-weight: bold; cursor: pointer; font-size: 11px;">JOIN</button>
                 </div>
             </div>
         </div>
 
         <div class="copyright">
-            <p>© LUXE LIFE FASHION. ALL RIGHTS RESERVED.</p>
+            <p>© LUXE VOGUE FASHION. ALL RIGHTS RESERVED.</p>
             <p style="margin-top: 4px; color: #555;">Contact: info.luxelife@proton.me</p>
         </div>
     </footer>
@@ -492,9 +472,9 @@
     <div class="modal-overlay" id="contactModal">
         <div class="modal-box">
             <span class="close-btn" onclick="closeModals()">&times;</span>
-            <h3 style="letter-spacing: 2px; font-size: 18px; margin-bottom: 10px;">CONTACT LUXE LIFE</h3>
+            <h3 style="letter-spacing: 2px; font-size: 18px; margin-bottom: 10px;">CONTACT LUXE VOGUE</h3>
             <p style="font-size: 13px; color: #555;">For custom orders or inquiries, please contact us at:</p>
-            <div class="email-display" style="font-size: 14px; padding: 10px 18px; margin-top: 15px;">info.luxelife@proton.me</div>
+            <div class="email-display" style="font-size: 15px; padding: 10px 18px; margin-top: 15px;">info.luxelife@proton.me</div>
         </div>
     </div>
 
@@ -511,7 +491,7 @@
                 ✔ All Other Countries Globally
             </div>
             <div class="excluded-tag">
-                ⚠️️ Notice: Available worldwide EXCEPT to Iraq.
+                ⚠️ Notice: Available worldwide EXCEPT to Iraq.
             </div>
         </div>
     </div>
